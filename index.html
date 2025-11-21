@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PureTex Shopping</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand"><span class="logo" aria-hidden="true"></span>PureTex</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#" data-nav="home">Home</a>
+        <a href="#categories" data-nav="categories">Categories</a>
+        <a href="#" data-nav="contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="intro">
+          <h1 id="hero-title">PureTex — Modern shopping, simple choices</h1>
+          <p class="muted">Quality clothing for every age. Click continue to begin browsing our categories.</p>
+          <div class="cta-row">
+            <button id="open-welcome" class="btn btn-primary">Continue</button>
+            <button id="view-categories" class="btn btn-outline">View Categories</button>
+          </div>
+        </div>
+
+        <aside class="preview-card" aria-hidden="true">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='360'><rect width='100%' height='100%' fill='%230b1220'/><text x='50%' y='50%' fill='%23e6eef7' font-size='28' font-family='Arial' text-anchor='middle' dominant-baseline='middle'>PureTex</text></svg>" alt="PureTex preview">
+        </aside>
+      </section>
+
+      <div class="toolbar" role="toolbar" aria-label="Category toolbar">
+        <div class="search">
+          <input id="search" placeholder="Search products (name)" aria-label="Search products">
+        </div>
+        <div class="row" id="category-buttons"></div>
+      </div>
+
+      <section class="products" id="products" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+      <div>© <strong>PureTex</strong> — handcrafted demo UI</div>
+      <div class="muted">Credits: Ch.Lalith Krishna Pratheek, K.Dinesh, A.Sashank Kumar</div>
+    </footer>
+  </div>
+
+  <!-- Welcome Modal -->
+  <div id="welcome-modal" role="dialog" aria-modal="true" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:120;">
+    <div style="background:linear-gradient(180deg,rgba(2,6,23,0.9),rgba(4,9,20,0.98));padding:28px;border-radius:12px;max-width:520px;width:92%;box-shadow:var(--shadow);text-align:center;">
+      <h2 style="margin-bottom:8px">Welcome to PureTex</h2>
+      <p class="muted">Find clothing tailored to your style — explore categories to begin.</p>
+      <div style="margin-top:16px;display:flex;gap:10px;justify-content:center;">
+        <button id="welcome-continue" class="btn btn-primary">Continue</button>
+        <button id="welcome-later" class="btn btn-outline">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Modal -->
+  <div id="product-modal" role="dialog" aria-modal="true" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:130;">
+    <div style="background:var(--card);padding:18px;border-radius:12px;max-width:520px;width:92%;box-shadow:var(--shadow);">
+      <div id="product-content"></div>
+      <div style="margin-top:12px;display:flex;gap:10px;justify-content:flex-end;">
+        <button id="add-cart" class="btn btn-outline">Add to cart</button>
+        <button id="buy-now" class="btn btn-primary">Buy</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Under construction overlay -->
+  <div id="under-overlay" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:140;background:rgba(2,6,23,0.7);color:#fff;">
+    <div style="background:#021018;padding:24px;border-radius:10px;text-align:center;">
+      <h3>Site Under Construction</h3>
+      <p class="muted">We're working on secure checkout. Redirecting back to welcome...</p>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
